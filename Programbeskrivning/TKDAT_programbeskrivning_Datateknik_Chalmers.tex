@@ -1,0 +1,403 @@
+\documentclass[twocolumn]{article}
+\usepackage{a4wide}
+\usepackage[utf8]{inputenc}
+\usepackage[english,swedish]{babel}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\newcommand{\TODO}[1]{\marginpar{\footnotesize \raggedright #1}}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1ex plus 0.7ex minus 0.7 ex}
+\pagestyle{plain}
+%\pagestyle{headings}
+\newcommand{\meta}[1]{{\small \emph{#1}}}
+\newcommand{\comment}[1]{}
+\hypersetup{pdftex, 
+  colorlinks=true, 
+  linkcolor=blue, 
+  citecolor=blue,
+  filecolor=blue, 
+  urlcolor=blue, 
+  pdftitle={Programbeskrivning för Datateknik, 300hp (Chalmers)}, 
+  pdfauthor=Patrik Jansson,
+  pdfsubject=, 
+  pdfkeywords=
+}
+\title{Programbeskrivning för Datateknik, 300hp (Chalmers)}
+\author{Patrik Jansson, programansvarig}
+\date{Utkast 2011-09-01}
+
+\begin{document}
+\maketitle
+\section{Inledning}
+%  {\small (1-2 sidor)}
+
+Termen Datateknik (D) används i detta dokument som motsvarande det
+breda begreppet \foreignlanguage{english}{Computer Science and
+  Engineering (CSE)}.
+
+\begin{quote}
+  \foreignlanguage{english}{An engineer is a professional practitioner
+    of engineering, concerned with applying scientific knowledge,
+    mathematics and ingenuity to develop solutions for technical and
+    practical problems. \meta{[Wikipedia:Engineer, 2011-09-01]}}
+\end{quote}
+
+\subsection*{Versionshistoria}
+{\small
+\begin{description}
+\item[2011-09-01:] Omarbetat av \href{http://www.chalmers.se/cse/EN/people/jansson-patrik}{Patrik Jansson} baserat på material från 
+\href{http://wiki.portal.chalmers.se/cse/pmwiki.php/PAD/L%C3%A4rarm%C3%B6teVT2011}{lärarmöte 2011-06-01}.
+\item[2010-04-11:] utkast av Peter Lundin
+\end{description}
+}
+
+\subsection{Syfte} 
+\meta{Programsyftet beskriver på ett övergripande sätt vad programmet vill
+uppnå}
+
+Civilingenjörsprogrammet i datateknik syftar till att studenten ska
+utveckla kunskaper, färdighet och förhållningssätt som gör att de:
+\begin{itemize}
+\item på ett ingenjörsmässigt sätt kan delta i och leda utveckling av
+  generella datorsystem i en internationell omgivning och i samklang
+  med samhälle och miljö.
+\item kan lösa forskningsmässiga och komplexa datatekniska problem.
+\item är väl förberedda för fortsatta studier på forskarnivå inom
+  datateknik.
+\end{itemize}
+Att arbeta på ett ingenjörsmässigt sätt innebär att
+%\begin{itemize}
+%\item 
+baserat på en vetenskapskaplig grund och beprövad erfarenhet,
+%\item
+tillsammans med andra utvecklare och med användare av systemet,
+%\item 
+inom givna ekonomiska och tidsmässiga ramar,
+%\item 
+utveckla en tillräckligt bra lösning på ett problem.
+%\end{itemize}
+
+Utbildningen ska även ge goda möjligheter till utveckling av de
+personliga egenskaper och attityder som bidrar till god ingenjörsetik.
+
+\subsection{Examen}
+% \meta{behörighet, examensbenämning, uppläggningen av programbeskrivningen}
+
+Programmet leder till en civilingenjörsexamen i datateknik, samt
+normalt också en kandidatexamen och en masterexamen.
+
+\section{Programmål}
+%  {\small (1-2 sidor)}
+\meta{Programmålen utgör de kunskaper, färdigheter och
+  förhållningssätt som de studerande förväntas ha utvecklat efter
+  genomgången utbildning. Programmålen kan sägas vara en
+  konkretisering av syftet och beskriver en mer detaljerad och
+  uppföljningsbar uppsättning lärandemål. (Skall vara oberoende av
+  implementeringen i termer av kurser.)}
+
+D-programmets 12 mål är specialiseringar av examensordningens mål för
+civilingenjörsexamen.
+
+% En civilingenjör i datateknik ska ha en bred kompetens inom datateknik
+% och ska:
+% \begin{itemize}
+% \item på ett ingenjörsmässigt sätt, kunna delta i och leda utveckling
+%   av komplexa datorsystem bestående av hård- eller mjukvara, såväl för
+%   generella som för tekniska system.
+% \item kunna genomföra utvecklingsarbeten i både nationella och
+%   internationella miljöer och i samklang med samhälle och miljö.
+% \item visa goda teoretiska kunskaper samt praktiska färdigheter.
+% \item kunna lösa forskningsmässiga och komplexa datatekniska problem.
+% \end{itemize}
+
+%\cleardoublepage
+\input{Goals_Chalmers_CSE}
+
+\subsection{Goals of the associated MSc programmes}
+\subsubsection{Computer Science --- Algorithms, Languages and Logic}
+\meta{Version 2011-08-31 by Peter Damaschke.}
+% MPALG: 
+After completion of their studies, the students shall be able to
+\begin{itemize}
+\item apply solid knowledge in the mathematical and logical
+  foundations of computing, including aspects like tractability,
+  complexity, correctness, and safety,
+\item create models that are both meaningful and amenable to analysis,
+  thereby choosing the right level of abstraction,
+\item develop correct and efficient computer programmes and systems
+  that satisfy given requirements under given constraints,
+\item analyse and test systems, evaluate, predict, prove and verify
+  their essential properties,
+\item identify and handle complex computational problems, also within
+  project work, communicate their ideas and results to both
+  specialists and nonspecialists, give structured and scholarly
+  presentations in oral and written form,
+\item find scientific information and integrate knowledge, identify
+  their own needs for gathering further knowledge and do the necessary
+  self-study,
+\item work in international environments,
+\item critically judge systems, results, and the use of information
+  technology also from a social point of view, and be aware that
+  results of computations crucially depend on model assumptions.
+\end{itemize}
+
+\subsubsection{Computer Systems and Networks}%MPCSN: 
+\meta{Version 2011-02-23 by Elad Schiller (copied from the
+  \href{https://www.student.chalmers.se/sp/program?program_id=814}{student
+    portal}).}
+
+One of the programme's teaching philosophies is that a solid grasp of
+computer systems and networks can be developed by studying the
+different methodologies used to construct computer systems and
+networks such as system engineering, computer architecture,
+programming and distributed computing. Consequently, coursework
+requires students to solve problems from the area of system and
+network design that involve the above mentioned aspects and techniques.
+
+After the completion of the programme, we will be able to:
+\begin{itemize}
+\item Design a system based on new and existing components (System
+  Engineering),
+\item Discuss with a professional the meaning of key concepts in
+  low-level hardware/software interaction (Computer Architecture),
+\item Develop systems and applications (Programming),
+\item Analyse the performance and limitations of the designed system
+  (Distributed Computing).
+\end{itemize}
+
+The programme's holistic philosophy equips its graduates with a wide
+range of industry-related engineering skills. Rather than
+concentrating on a single aspect of computer systems and networks, the
+courses provide the practical and up-to-date experience required by
+the major IT companies that develop computer systems and networks.
+
+\section{Programutformning}
+%  {\small (5-8 sidor)}
+\newcommand{\courselink}[2]{\href{https://www.student.chalmers.se/sp/course?course_id=#1}{#2}}
+
+\newcommand{\introFP }{\courselink{16717}{Introduktion till funktionell programmering}}
+\newcommand{\DiskMat }{\courselink{16714}{Inledande diskret matematik}}
+\newcommand{\DigoDat }{\courselink{16012}{Digital- och  datorteknik}}
+\newcommand{\LinAlg  }{\courselink{16376}{Linjär algebra}}
+\newcommand{\MOP     }{\courselink{15446}{Maskinorienterad programmering}}
+\newcommand{\MatAn   }{\courselink{15413}{Matematisk analys}}
+\newcommand{\ElKrets }{\courselink{15353}{Elektriska kretsar och fält}}
+\newcommand{\Barkraft}{\courselink{16340}{Bärkraftig resursanvändning}}
+
+\newcommand{\OOP     }{\courselink{16190}{Objektorienterad programmering}}
+\newcommand{\DStr    }{\courselink{16480}{Datastrukturer}}
+\newcommand{\DigSynt }{\courselink{16419}{Digitalteknik-syntes}}
+\newcommand{\DaSyTe  }{\courselink{15460}{Datorsystemteknik}}
+\newcommand{\MaStDiMa}{\courselink{16511}{Matematisk statistik och diskret matematik}}
+\newcommand{\FyIng   }{\courselink{16409}{Fysik för ingenjörer}}
+\newcommand{\ParProg }{\courselink{15402}{Parallell programmering}}
+\newcommand{\ProgPara}{\courselink{16828}{Programmerings\-paradigmer}}
+\newcommand{\Datakom }{\courselink{16479}{Datakommunikation}}
+
+\newcommand{\TraSiSy }{\courselink{16710}{Transformer, signaler och system}}
+\newcommand{\Regler  }{\courselink{15591}{Reglerteknik}}
+\newcommand{\Kandarb }{\courselink{16697}{Kandidatarbete}}
+
+\begin{figure*}
+  \centering
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+
+\textbf{Årskurs 1}
+
+\begin{tabularx}{\textwidth}{|*{4}{C|}}
+  \hline
+  \introFP{} &  \DigoDat{} &  \MOP{} &  \ElKrets{}  \\\hline
+  \DiskMat{} &  \LinAlg{} &  \MatAn{} &  \Barkraft{}  \\\hline
+\end{tabularx}
+
+\textbf{Årskurs 2}
+
+\begin{tabularx}{\textwidth}{|*{4}{C|}}
+  \hline
+  \OOP{} &  \DStr{} &  \DigSynt &  \DaSyTe{}  \\\hline
+  \MaStDiMa{} &  \FyIng{} &  \ParProg{} \emph{eller} \ProgPara{} & \Datakom{}
+  \\\hline
+\end{tabularx}
+
+\textbf{Årskurs 3}
+
+\begin{tabularx}{\textwidth}{|*{4}{C|}}
+  \hline
+  \TraSiSy{} &
+  \Regler{} &
+  \Kandarb{} &
+  \Kandarb{} forts. 
+\\\hline
+  Valfri kurs &
+  Valfri kurs &
+  Valfri kurs &
+  Valfri kurs
+\\\hline
+\end{tabularx}
+  
+  \caption{Årskurs 1--3}
+  \label{fig:year1}
+\end{figure*}
+\subsection{Programidé}
+\meta{Programidén redogör för hur utbildningen är upplagd för att
+  uppnå de formulerade målen. Den är typiskt i form av en punktlista
+  med de viktigaste principerna bakom programmets utformning, eller
+  valda strategier för att uppnå målen.}
+
+Programmet skall genom sin utformning ge alla studenter på programmet
+en möjlighet och förmåga att utvecklas kunskapsmässigt inom
+framförallt ett brett fält av datateknik och datalogi samt
+individuellt som person inom områden som ger stöd i den kommande
+yrkesrollen som ledande teknikutvecklare.
+
+Programmets ska ge en god grund för att i den kommande
+yrkesverksamheten, på olika nivåer, aktivt kunna medverka i och leda
+utveckling av hård- och framförallt mjukvara för både inbyggda och
+generella datorsystem. Detta kräver teoretiska grundkunskaper inom
+både datateknik och matematik.
+
+Programmet har en struktur enligt Bologna-modellen med en första cykel
+om tre år på grundläggande nivå (kandidatexamen) samt en efterföljande
+cykel om 2 år med kurser på avancerad nivå (masterprogram). Den senare
+cykeln av utbildningen genomförs helt på engelska tillsammans med
+internationella studenter och syftar till att ge fördjupade kunskaper
+inom en begränsad del av ämnesområdet datateknik för att skapa
+möjligheten att kunna leda och medverka i utveckling av mer komplexa
+datorsystem.
+
+Genom att i de första två åren nästan enbart erbjuda obligatoriska
+kurser följt av ett tredje år med en relativt stor valbarhet ges en
+tillräcklig gemensam ämnesplattform som karakteriserar en
+civilingenjör i datateknik samt en valbarhet för att testa olika
+områden inför den kommande specialiseringen i de avslutande två åren.
+Det tredje året avslutas med ett kandidatarbete inom vilket man i en
+projektgrupp genomför en projektuppgift vanligen i form av ett
+konstruktionsuppdrag. Kandidatarbetet skall ge tillfälle att kombinera
+kunskaperna från olika tidigare kurser samt ge träning i olika faser
+av ett utvecklingsprojekt.
+
+\subsection{Programplan}
+
+\meta{Programplanen beskriver exakt vilka kurser som ska läsas som
+  obligatoriska eller är valbara för varje årskurs av utbildningen
+  under ett visst läsår.}
+
+Programmet är indelat i kurser omfattande 7.5hp av vilka man läser
+två per läsperiod.
+\paragraph{Årskurs 1 till 3} De tre första årens kurser är placerade
+enligt figur \ref{fig:year1} där varje kolumn motsvarar en läsperiod.
+
+\paragraph{Årskurs 4 och 5}
+
+Under de avslutande två åren följer studenterna ett av för närvarande
+sex möjliga specialiseringar i form av tvååriga masterprogram.
+Programmen skiljer sig åt avseende förkunskaper och platsgaranti.
+Masterprogrammen består normalt av 45 hp obligatoriska kurser som
+tillsammans med det avslutande masterexamensarbetet om 30 eller 60 hp
+säkerställer fördjupningen inom den valda specialiseringen.
+
+För det övriga innehållet i masterprogrammen erbjuds en stor valfrihet
+avseende kurser och kursinnehåll i syfte att erbjuda studenten en
+möjlighet till en personligt styrd breddning/fördjupning av
+utbildningen. 
+
+För att bli behörig behöver man förutom de allmänna kraven dessutom
+läsa vissa angivna kurser under det tredje läsåret. För information om
+förkunskapskrav och övrig information hänvisas till respektive
+masterprograms utbildningsplan som man hittar via Chalmers
+hemsida. Till masterprogrammen antas även studenter från andra svenska
+eller internationella högskolor och universitet.  Undervisning och
+examination på masterprogrammens kurser genomförs normalt på engelska.
+
+De masterprogram som erbjuds inom datateknik är för närvarande de
+nedan angivna. D-studenter som uppfyller antagningskraven har
+garantiplats på något av de två program märkta med (Garanti).
+
+\begin{itemize}
+\item \foreignlanguage{english}{Computer Science --- Algorithms,
+    Languages and Logic} (Garanti)
+\item \foreignlanguage{english}{Computer Systems and Networks} (Garanti)
+\item \foreignlanguage{english}{Software Engineering}
+\item \foreignlanguage{english}{Interaction Design and Technologies}
+\item \foreignlanguage{english}{Embedded Electronic System Design}
+\item Lärande och ledarskap (som också leder till gymnasielärarexamen)
+\end{itemize}
+
+\subsection{Lärsekvenser / program\-designmatris}
+\newcommand{\rot}[1]{\rotatebox{90}{#1}}
+\begin{figure*}
+\centering
+\rowcolors{1}{white}{lightgray}
+\begin{tabular}{rlllllllllllllllllll}
+   \rot{$\leftarrow$Mål / $\downarrow$Kursnamn}
+  &\rot{\introFP{}} 
+  &\rot{\DiskMat{}}
+  &\rot{\DigoDat{}}
+  &\rot{\LinAlg{}}
+  &\rot{\MOP{}}
+  &\rot{\MatAn{}}
+  &\rot{\ElKrets{}}
+  &\rot{\Barkraft{}}
+  &\rot{\OOP{}}
+  &\rot{\MaStDiMa{}}
+  &\rot{\DStr{}}
+  &\rot{\FyIng{}}
+  &\rot{\DigSynt}
+  &\rot{\DaSyTe{}}
+  &\rot{\Datakom{}}
+  &\rot{\TraSiSy{}}
+  &\rot{\Regler{}}
+  &\rot{\Kandarb{}}
+  &\rot{Masterprogram}
+%   FpDmDdLaMpMaElBäOpMsDsFiDiDtDkTsReKaMa
+\\ 1&X&X&X& &X& &X&X&X&X&X&X&X&X&X&X& &X&X
+\\ 2&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X
+\\ 3&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X
+\\ 4&X& &X& &X& & & &X& &X& &X&X&X& & &X&X
+\\ 5& & & & & & & & & & & & & & & & & &X&X
+\\ 6& & & & & & &X& & &X& &X&X& & &X& &X&X
+\\ 7& & &X&X& & & & & & &x& & & & & &X&x&X
+\\ 8&x& & & & & & & & & & & & & & & & &X&X
+\\ 9& & & & & & & & & & &x& & & & &X& &X&X
+\\10& & & & & & & & & & & & & & & & & &x&x
+\\11& & & & & & & & & & & &x&x& & & & & &
+\\12& & & & & & & & & & & &X& & & & & & &X
+  \end{tabular}
+  \caption{Programdesignmatris}
+  \label{fig:programdesignmatris}
+\end{figure*}
+
+\meta{Programdesignmatrisen kopplar samman programmets mål med de
+  ingående kurserna så att det framgår i vilken/vilka kurs(er) som
+  vissa kunskaper eller färdigheter tänks utvecklas och examineras. I
+  programdesignmatrisen synliggörs också planerade lärsekvenser för
+  kunskaper, färdigheter och förhållningssätt som utvecklas som
+  integrerade inslag i en serie av kurser.
+\begin{itemize}
+\item programmets mål är raderna, programmets kurser kolumnerna
+\item I = Introducera, U = Undervisa, A = Använda anges i rutorna
+\item alternativt kan man direkt göra en mer effektiv beskrivning av
+  den glesa matrisen genom att bara lista ``lärsekvenser''
+\end{itemize}
+}
+
+I figur \ref{fig:programdesignmatris} finns en preliminär
+programdesignmatris där ``X'' står för ``I'', ``U'', eller ``A'' och
+där lilla ``x'' är en svagare koppling är stora ``X''.
+
+\appendix
+
+% \href{http://wiki.portal.chalmers.se/cse/pmwiki.php/PAD/Programbeskrivningsprocess}{Wiki-sida för programbeskrivningsprocessen}
+% 
+\section{TODO}
+\begin{itemize}
+\item fyll på med lärsekvenser
+\item jämför studentportalen förkunskapskrav och lärmål på alla ingående kurser
+\item ta med lärmål för de avslutande masterprogrammen
+\item homogenisera språket i programmåldelen
+\end{itemize}
+\input{Vision_Jansson_2010}
+\end{document}
