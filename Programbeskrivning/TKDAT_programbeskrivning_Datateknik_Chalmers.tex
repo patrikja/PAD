@@ -1,7 +1,7 @@
 \documentclass[twocolumn]{article}
 \usepackage{a4wide}
 \usepackage[utf8]{inputenc}
-\usepackage[english,swedish]{babel}
+\usepackage[british,swedish]{babel}
 \usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -26,27 +26,28 @@
 }
 \title{Programbeskrivning för Datateknik, 300hp (Chalmers)}
 \author{Patrik Jansson, programansvarig}
-\date{Utkast 2011-09-01}
+\date{Utkast 2011-10-01}
 
 \begin{document}
 \maketitle
 \section{Inledning}
 %  {\small (1-2 sidor)}
 
-Termen Datateknik (D) används i detta dokument som motsvarande det
-breda begreppet \foreignlanguage{english}{Computer Science and
-  Engineering (CSE)}.
-
 \begin{quote}
-  \foreignlanguage{english}{An engineer is a professional practitioner
+  \foreignlanguage{british}{An engineer is a professional practitioner
     of engineering, concerned with applying scientific knowledge,
     mathematics and ingenuity to develop solutions for technical and
     practical problems. \meta{[Wikipedia:Engineer, 2011-09-01]}}
 \end{quote}
 
+Termen Datateknik (D) används i detta dokument som motsvarande det
+breda begreppet \foreignlanguage{british}{Computer Science and
+  Engineering (CSE)}.
+
 \subsection*{Versionshistoria}
 {\small
 \begin{description}
+\item[2011-10-01:] Smärre justeringar (PJ)
 \item[2011-09-01:] Omarbetat av \href{http://www.chalmers.se/cse/EN/people/jansson-patrik}{Patrik Jansson} baserat på material från 
 \href{http://wiki.portal.chalmers.se/cse/pmwiki.php/PAD/L%C3%A4rarm%C3%B6teVT2011}{lärarmöte 2011-06-01}.
 \item[2010-04-11:] utkast av Peter Lundin
@@ -86,7 +87,7 @@ personliga egenskaper och attityder som bidrar till god ingenjörsetik.
 % \meta{behörighet, examensbenämning, uppläggningen av programbeskrivningen}
 
 Programmet leder till en civilingenjörsexamen i datateknik, samt
-normalt också en kandidatexamen och en masterexamen.
+normalt också en kandidat\-examen och en masterexamen.
 
 \section{Programmål}
 %  {\small (1-2 sidor)}
@@ -115,10 +116,12 @@ civilingenjörsexamen.
 %\cleardoublepage
 \input{Goals_Chalmers_CSE}
 
+\selectlanguage{british}
 \subsection{Goals of the associated MSc programmes}
 \subsubsection{Computer Science --- Algorithms, Languages and Logic}
 \meta{Version 2011-08-31 by Peter Damaschke.}
-% MPALG: 
+% We should place this text in a separate file and include that from
+% both the MPALG and TKDAT programme descriptions.
 After completion of their studies, the students shall be able to
 \begin{itemize}
 \item apply solid knowledge in the mathematical and logical
@@ -131,9 +134,10 @@ After completion of their studies, the students shall be able to
 \item analyse and test systems, evaluate, predict, prove and verify
   their essential properties,
 \item identify and handle complex computational problems, also within
-  project work, communicate their ideas and results to both
-  specialists and nonspecialists, give structured and scholarly
-  presentations in oral and written form,
+  project work, 
+\item communicate their ideas and results to both specialists and
+  nonspecialists, give structured and scholarly presentations in oral
+  and written form,
 \item find scientific information and integrate knowledge, identify
   their own needs for gathering further knowledge and do the necessary
   self-study,
@@ -152,11 +156,11 @@ One of the programme's teaching philosophies is that a solid grasp of
 computer systems and networks can be developed by studying the
 different methodologies used to construct computer systems and
 networks such as system engineering, computer architecture,
-programming and distributed computing. Consequently, coursework
+programming and distributed computing. Consequently, course\-work
 requires students to solve problems from the area of system and
 network design that involve the above mentioned aspects and techniques.
 
-After the completion of the programme, we will be able to:
+After the completion of the programme, the student will be able to:
 \begin{itemize}
 \item Design a system based on new and existing components (System
   Engineering),
@@ -167,12 +171,14 @@ After the completion of the programme, we will be able to:
   (Distributed Computing).
 \end{itemize}
 
+%Is there really a "holistic philosophy" in this programme? What does that mean?
 The programme's holistic philosophy equips its graduates with a wide
 range of industry-related engineering skills. Rather than
 concentrating on a single aspect of computer systems and networks, the
 courses provide the practical and up-to-date experience required by
 the major IT companies that develop computer systems and networks.
 
+\selectlanguage{swedish}
 \section{Programutformning}
 %  {\small (5-8 sidor)}
 \newcommand{\courselink}[2]{\href{https://www.student.chalmers.se/sp/course?course_id=#1}{#2}}
@@ -249,24 +255,25 @@ the major IT companies that develop computer systems and networks.
 
 Programmet skall genom sin utformning ge alla studenter på programmet
 en möjlighet och förmåga att utvecklas kunskapsmässigt inom
-framförallt ett brett fält av datateknik och datalogi samt
-individuellt som person inom områden som ger stöd i den kommande
-yrkesrollen som ledande teknikutvecklare.
+framförallt ett brett fält av datateknik samt individuellt som person
+inom områden som ger stöd i den kommande yrkesrollen som ledande
+teknikutvecklare.
+%Notera att datalogi ingår i det vi menar med datateknik i detta dokument.
 
-Programmets ska ge en god grund för att i den kommande
+Programmet ska ge en god grund för att i den kommande
 yrkesverksamheten, på olika nivåer, aktivt kunna medverka i och leda
 utveckling av hård- och framförallt mjukvara för både inbyggda och
 generella datorsystem. Detta kräver teoretiska grundkunskaper inom
 både datateknik och matematik.
 
 Programmet har en struktur enligt Bologna-modellen med en första cykel
-om tre år på grundläggande nivå (kandidatexamen) samt en efterföljande
-cykel om 2 år med kurser på avancerad nivå (masterprogram). Den senare
-cykeln av utbildningen genomförs helt på engelska tillsammans med
-internationella studenter och syftar till att ge fördjupade kunskaper
-inom en begränsad del av ämnesområdet datateknik för att skapa
-möjligheten att kunna leda och medverka i utveckling av mer komplexa
-datorsystem.
+om tre år på grundläggande nivå (som leder till kandidatexamen) samt
+en efterföljande cykel om 2 år med kurser på avancerad nivå (inom
+masterprogram). Den senare cykeln av utbildningen genomförs helt på
+engelska tillsammans med internationella studenter och syftar till att
+ge fördjupade kunskaper inom en begränsad del av ämnesområdet
+datateknik för att skapa möjligheten att kunna leda och medverka i
+utveckling av mer komplexa datorsystem.
 
 Genom att i de första två åren nästan enbart erbjuda obligatoriska
 kurser följt av ett tredje år med en relativt stor valbarhet ges en
@@ -283,7 +290,7 @@ av ett utvecklingsprojekt.
 
 \meta{Programplanen beskriver exakt vilka kurser som ska läsas som
   obligatoriska eller är valbara för varje årskurs av utbildningen
-  under ett visst läsår.}
+  som startat ett visst läsår.}
 
 Programmet är indelat i kurser omfattande 7.5hp av vilka man läser
 två per läsperiod.
@@ -292,17 +299,18 @@ enligt figur \ref{fig:year1} där varje kolumn motsvarar en läsperiod.
 
 \paragraph{Årskurs 4 och 5}
 
-Under de avslutande två åren följer studenterna ett av för närvarande
-sex möjliga specialiseringar i form av tvååriga masterprogram.
-Programmen skiljer sig åt avseende förkunskaper och platsgaranti.
-Masterprogrammen består normalt av 45 hp obligatoriska kurser som
-tillsammans med det avslutande masterexamensarbetet om 30 eller 60 hp
-säkerställer fördjupningen inom den valda specialiseringen.
+Under de avslutande två åren följer studenterna ett av nedan angivna
+masterprogram.  Programmen skiljer sig åt avseende förkunskaper och
+platsgaranti.  Masterprogrammen består normalt av 60 hp (delvis)
+obligatoriska kurser som tillsammans med det avslutande
+masterexamensarbetet om 30 hp säkerställer fördjupningen inom den
+valda specialiseringen. (Det finns även möjlighet till ett
+examensarbete om 60hp under särskilda omständigheter.)
 
 För det övriga innehållet i masterprogrammen erbjuds en stor valfrihet
 avseende kurser och kursinnehåll i syfte att erbjuda studenten en
-möjlighet till en personligt styrd breddning/fördjupning av
-utbildningen. 
+möjlighet till en personligt styrd breddning eller fördjupning av
+utbildningen.
 
 För att bli behörig behöver man förutom de allmänna kraven dessutom
 läsa vissa angivna kurser under det tredje läsåret. För information om
@@ -312,18 +320,20 @@ hemsida. Till masterprogrammen antas även studenter från andra svenska
 eller internationella högskolor och universitet.  Undervisning och
 examination på masterprogrammens kurser genomförs normalt på engelska.
 
-De masterprogram som erbjuds inom datateknik är för närvarande de
-nedan angivna. D-studenter som uppfyller antagningskraven har
-garantiplats på något av de två program märkta med (Garanti).
+De masterprogram som erbjuds inom datateknik är de nedan
+angivna. D-studenter som uppfyller antagningskraven har garantiplats
+på något av de två program märkta med (Garanti).
 
 \begin{itemize}
-\item \foreignlanguage{english}{Computer Science --- Algorithms,
+\item \foreignlanguage{british}{Computer Science --- Algorithms,
     Languages and Logic} (Garanti)
-\item \foreignlanguage{english}{Computer Systems and Networks} (Garanti)
-\item \foreignlanguage{english}{Software Engineering}
-\item \foreignlanguage{english}{Interaction Design and Technologies}
-\item \foreignlanguage{english}{Embedded Electronic System Design}
+\item \foreignlanguage{british}{Computer Systems and Networks} (Garanti)
+\item \foreignlanguage{british}{Software Engineering}
+\item \foreignlanguage{british}{Interaction Design and Technologies}
+\item \foreignlanguage{british}{Embedded Electronic System Design}
 \item Lärande och ledarskap (som också leder till gymnasielärarexamen)
+\item \foreignlanguage{british}{Systems, Control and Mechatronics}
+\item \foreignlanguage{british}{Engineering Mathematics and Computational Science}
 \end{itemize}
 
 \subsection{Lärsekvenser / program\-designmatris}
@@ -362,7 +372,7 @@ garantiplats på något av de två program märkta med (Garanti).
 \\ 7& & &X&X& & & & & & &x& & & & & &X&x&X
 \\ 8&x& & & & & & & & & & & & & & & & &X&X
 \\ 9& & & & & & & & & & &x& & & & &X& &X&X
-\\10& & & & & & & & & & & & & & & & & &x&x
+\\10& & & & & & & &X& & & & & & & & & &x&x
 \\11& & & & & & & & & & & &x&x& & & & & &
 \\12& & & & & & & & & & & &X& & & & & & &X
   \end{tabular}
@@ -396,7 +406,6 @@ där lilla ``x'' är en svagare koppling är stora ``X''.
 \begin{itemize}
 \item fyll på med lärsekvenser
 \item jämför studentportalen förkunskapskrav och lärmål på alla ingående kurser
-\item ta med lärmål för de avslutande masterprogrammen
 \item homogenisera språket i programmåldelen
 \end{itemize}
 \input{Vision_Jansson_2010}
