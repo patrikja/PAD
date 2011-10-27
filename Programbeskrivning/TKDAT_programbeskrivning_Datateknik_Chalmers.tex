@@ -26,7 +26,7 @@
 }
 \title{Programbeskrivning för Datateknik, 300hp (Chalmers)}
 \author{Patrik Jansson, programansvarig}
-\date{Utkast 2011-10-01}
+\date{Utkast 2011-11-01}
 
 \begin{document}
 \maketitle
@@ -47,6 +47,7 @@ breda begreppet \foreignlanguage{british}{Computer Science and
 \subsection*{Versionshistoria}
 {\small
 \begin{description}
+\item[2011-11-01:] Translated goals to English (PJ) + added D2012 curriculum (prel.)
 \item[2011-10-01:] Smärre justeringar (PJ)
 \item[2011-09-01:] Omarbetat av \href{http://www.chalmers.se/cse/EN/people/jansson-patrik}{Patrik Jansson} baserat på material från 
 \href{http://wiki.portal.chalmers.se/cse/pmwiki.php/PAD/L%C3%A4rarm%C3%B6teVT2011}{lärarmöte 2011-06-01}.
@@ -89,7 +90,7 @@ personliga egenskaper och attityder som bidrar till god ingenjörsetik.
 Programmet leder till en civilingenjörsexamen i datateknik, samt
 normalt också en kandidat\-examen och en masterexamen.
 
-\section{Programmål}
+\section{Programme goals}
 %  {\small (1-2 sidor)}
 \meta{Programmålen utgör de kunskaper, färdigheter och
   förhållningssätt som de studerande förväntas ha utvecklat efter
@@ -98,8 +99,11 @@ normalt också en kandidat\-examen och en masterexamen.
   uppföljningsbar uppsättning lärandemål. (Skall vara oberoende av
   implementeringen i termer av kurser.)}
 
-D-programmets 12 mål är specialiseringar av examensordningens mål för
-civilingenjörsexamen.
+\selectlanguage{british}
+The 12 goals of the CSE-programme are specialisations of the degree
+ordinance goals (examensordningens mål för civilingenjörsexamen).
+% D-programmets 12 mål är specialiseringar av examensordningens mål för
+% civilingenjörsexamen.
 
 % En civilingenjör i datateknik ska ha en bred kompetens inom datateknik
 % och ska:
@@ -116,67 +120,13 @@ civilingenjörsexamen.
 %\cleardoublepage
 \input{Goals_Chalmers_CSE}
 
-\selectlanguage{british}
 \subsection{Goals of the associated MSc programmes}
 \subsubsection{Computer Science --- Algorithms, Languages and Logic}
-\meta{Version 2011-08-31 by Peter Damaschke.}
-% We should place this text in a separate file and include that from
-% both the MPALG and TKDAT programme descriptions.
-After completion of their studies, the students shall be able to
-\begin{itemize}
-\item apply solid knowledge in the mathematical and logical
-  foundations of computing, including aspects like tractability,
-  complexity, correctness, and safety,
-\item create models that are both meaningful and amenable to analysis,
-  thereby choosing the right level of abstraction,
-\item develop correct and efficient computer programmes and systems
-  that satisfy given requirements under given constraints,
-\item analyse and test systems, evaluate, predict, prove and verify
-  their essential properties,
-\item identify and handle complex computational problems, also within
-  project work, 
-\item communicate their ideas and results to both specialists and
-  nonspecialists, give structured and scholarly presentations in oral
-  and written form,
-\item find scientific information and integrate knowledge, identify
-  their own needs for gathering further knowledge and do the necessary
-  self-study,
-\item work in international environments,
-\item critically judge systems, results, and the use of information
-  technology also from a social point of view, and be aware that
-  results of computations crucially depend on model assumptions.
-\end{itemize}
+\input{Goals_Chalmers_MPALG}
 
-\subsubsection{Computer Systems and Networks}%MPCSN: 
-\meta{Version 2011-02-23 by Elad Schiller (copied from the
-  \href{https://www.student.chalmers.se/sp/program?program_id=814}{student
-    portal}).}
+\subsubsection{Computer Systems and Networks}
 
-One of the programme's teaching philosophies is that a solid grasp of
-computer systems and networks can be developed by studying the
-different methodologies used to construct computer systems and
-networks such as system engineering, computer architecture,
-programming and distributed computing. Consequently, course\-work
-requires students to solve problems from the area of system and
-network design that involve the above mentioned aspects and techniques.
-
-After the completion of the programme, the student will be able to:
-\begin{itemize}
-\item Design a system based on new and existing components (System
-  Engineering),
-\item Discuss with a professional the meaning of key concepts in
-  low-level hardware/software interaction (Computer Architecture),
-\item Develop systems and applications (Programming),
-\item Analyse the performance and limitations of the designed system
-  (Distributed Computing).
-\end{itemize}
-
-%Is there really a "holistic philosophy" in this programme? What does that mean?
-The programme's holistic philosophy equips its graduates with a wide
-range of industry-related engineering skills. Rather than
-concentrating on a single aspect of computer systems and networks, the
-courses provide the practical and up-to-date experience required by
-the major IT companies that develop computer systems and networks.
+\input{Goals_Chalmers_MPCSN}
 
 \selectlanguage{swedish}
 \section{Programutformning}
@@ -185,25 +135,26 @@ the major IT companies that develop computer systems and networks.
 
 \newcommand{\introFP }{\courselink{16717}{Introduktion till funktionell programmering}}
 \newcommand{\DiskMat }{\courselink{16714}{Inledande diskret matematik}}
-\newcommand{\DigoDat }{\courselink{16012}{Digital- och  datorteknik}}
+\newcommand{\DigoDat }{\courselink{16012}{Grundläggande datorteknik (ny)}}
 \newcommand{\LinAlg  }{\courselink{16376}{Linjär algebra}}
-\newcommand{\MOP     }{\courselink{15446}{Maskinorienterad programmering}}
+\newcommand{\MOP     }{\courselink{15446}{Programmering av inbyggda system (ny)}}
 \newcommand{\MatAn   }{\courselink{15413}{Matematisk analys}}
+\newcommand{\OOP     }{\courselink{16190}{Objektorienterad programmering (flyttad)}}
 \newcommand{\ElKrets }{\courselink{15353}{Elektriska kretsar och fält}}
-\newcommand{\Barkraft}{\courselink{16340}{Bärkraftig resursanvändning}}
 
-\newcommand{\OOP     }{\courselink{16190}{Objektorienterad programmering}}
-\newcommand{\DStr    }{\courselink{16480}{Datastrukturer}}
-\newcommand{\DigSynt }{\courselink{16419}{Digitalteknik-syntes}}
-\newcommand{\DaSyTe  }{\courselink{15460}{Datorsystemteknik}}
+\newcommand{\DatProj }{\courselink{TODO} {Datatekniskt projekt (ny)}}
 \newcommand{\MaStDiMa}{\courselink{16511}{Matematisk statistik och diskret matematik}}
+\newcommand{\DStr    }{\courselink{16480}{Datastrukturer}}
 \newcommand{\FyIng   }{\courselink{16409}{Fysik för ingenjörer}}
+\newcommand{\DigSynt }{\courselink{16419}{Digitalteknik-syntes}}
 \newcommand{\ParProg }{\courselink{15402}{Parallell programmering}}
 \newcommand{\ProgPara}{\courselink{16828}{Programmerings\-paradigmer}}
+\newcommand{\DaSyTe  }{\courselink{15460}{Datorsystemteknik}}
 \newcommand{\Datakom }{\courselink{16479}{Datakommunikation}}
 
-\newcommand{\TraSiSy }{\courselink{16710}{Transformer, signaler och system}}
-\newcommand{\Regler  }{\courselink{15591}{Reglerteknik}}
+\newcommand{\Barkraft}{\courselink{16340}{? Ny Bärkraftig resursanvändning}}
+\newcommand{\TraSiSy }{\courselink{16710}{? Ny (Transformer, signaler och system)}}
+\newcommand{\Regler  }{\courselink{15591}{? Ny Reglerteknik}}
 \newcommand{\Kandarb }{\courselink{16697}{Kandidatarbete}}
 
 \begin{figure*}
@@ -215,16 +166,16 @@ the major IT companies that develop computer systems and networks.
 
 \begin{tabularx}{\textwidth}{|*{4}{C|}}
   \hline
-  \introFP{} &  \DigoDat{} &  \MOP{} &  \ElKrets{}  \\\hline
-  \DiskMat{} &  \LinAlg{} &  \MatAn{} &  \Barkraft{}  \\\hline
+  \introFP{} &  \DigoDat{} &  \MOP{}   &  \OOP{}      \\\hline
+  \DiskMat{} &  \LinAlg{}  &  \MatAn{} &  \ElKrets{}  \\\hline
 \end{tabularx}
 
 \textbf{Årskurs 2}
 
 \begin{tabularx}{\textwidth}{|*{4}{C|}}
   \hline
-  \OOP{} &  \DStr{} &  \DigSynt &  \DaSyTe{}  \\\hline
-  \MaStDiMa{} &  \FyIng{} &  \ParProg{} \emph{eller} \ProgPara{} & \Datakom{}
+  \DatProj{}  &  \DStr{}   &  \DigSynt &  \DaSyTe{}   \\\hline
+  \MaStDiMa{} &  \FyIng{}  &  \ParProg{} \emph{eller} \ProgPara{} & \Datakom{}
   \\\hline
 \end{tabularx}
 
@@ -232,9 +183,9 @@ the major IT companies that develop computer systems and networks.
 
 \begin{tabularx}{\textwidth}{|*{4}{C|}}
   \hline
-  \TraSiSy{} &
-  \Regler{} &
-  \Kandarb{} &
+  \Regler{}   &
+  \Barkraft{} &
+  \Kandarb{}  &
   \Kandarb{} forts. 
 \\\hline
   Valfri kurs &
@@ -244,8 +195,8 @@ the major IT companies that develop computer systems and networks.
 \\\hline
 \end{tabularx}
   
-  \caption{Årskurs 1--3}
-  \label{fig:year1}
+  \caption{Årskurs 1--3, D2012 (preliminärt).}
+  \label{fig:year123}
 \end{figure*}
 \subsection{Programidé}
 \meta{Programidén redogör för hur utbildningen är upplagd för att
@@ -295,7 +246,7 @@ av ett utvecklingsprojekt.
 Programmet är indelat i kurser omfattande 7.5hp av vilka man läser
 två per läsperiod.
 \paragraph{Årskurs 1 till 3} De tre första årens kurser är placerade
-enligt figur \ref{fig:year1} där varje kolumn motsvarar en läsperiod.
+enligt figur \ref{fig:year123} där varje kolumn motsvarar en läsperiod.
 
 \paragraph{Årskurs 4 och 5}
 
@@ -350,33 +301,34 @@ på något av de två program märkta med (Garanti).
   &\rot{\MOP{}}
   &\rot{\MatAn{}}
   &\rot{\ElKrets{}}
-  &\rot{\Barkraft{}}
   &\rot{\OOP{}}
+  &\rot{\DatProj{}}
   &\rot{\MaStDiMa{}}
   &\rot{\DStr{}}
   &\rot{\FyIng{}}
   &\rot{\DigSynt}
   &\rot{\DaSyTe{}}
   &\rot{\Datakom{}}
-  &\rot{\TraSiSy{}}
+  &\rot{\Barkraft{}}
+%  &\rot{\TraSiSy{}}
   &\rot{\Regler{}}
   &\rot{\Kandarb{}}
   &\rot{Masterprogram}
-%   FpDmDdLaMpMaElBäOpMsDsFiDiDtDkTsReKaMa
-\\ 1&X&X&X& &X& &X&X&X&X&X&X&X&X&X&X& &X&X
-\\ 2&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X
-\\ 3&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X&X
-\\ 4&X& &X& &X& & & &X& &X& &X&X&X& & &X&X
-\\ 5& & & & & & & & & & & & & & & & & &X&X
-\\ 6& & & & & & &X& & &X& &X&X& & &X& &X&X
-\\ 7& & &X&X& & & & & & &x& & & & & &X&x&X
-\\ 8&x& & & & & & & & & & & & & & & & &X&X
-\\ 9& & & & & & & & & & &x& & & & &X& &X&X
-\\10& & & & & & & &X& & & & & & & & & &x&x
-\\11& & & & & & & & & & & &x&x& & & & & &
-\\12& & & & & & & & & & & &X& & & & & & &X
+%   FpDmDdLaMpMaElOpDpMsDsFiDiDtDkBäReKaMa% Ts
+\\ 1&X&X&X& &X& &X&X&X&X&X&X&X&X&X&X& &X&X% &X
+\\ 2&X&X&X&X&X&X&X&X& &X&X&X&X&X&X&X&X&X&X% &X
+\\ 3&X&X&X&X&X&X&X&X& &X&X&X&X&X&X&X&X&X&X% &X
+\\ 4&X& &X& &X& & &X& & &X& &X&X&X& & &X&X% & 
+\\ 5& & & & & & & & &X& & & & & & & & &X&X% & 
+\\ 6& & & & & & &X& &X&X& &X&X& & & & &X&X% &X
+\\ 7& & &X&X& & & & &X& &x& & & & & &X&x&X% & 
+\\ 8&x& & & & & & & &X& & & & & & & & &X&X% & 
+\\ 9& & & & & & & & &X& &x& & & & & & &X&X% &X
+\\10& & & & & & & & & & & & & & & &X& &x&x% & 
+\\11& & & & & & & & & & & &x&x& & & & & & % & 
+\\12& & & & & & & & & & & &X& & & & & & &X% & 
   \end{tabular}
-  \caption{Programdesignmatris}
+  \caption{Programdesignmatris D2012}
   \label{fig:programdesignmatris}
 \end{figure*}
 
@@ -406,7 +358,6 @@ där lilla ``x'' är en svagare koppling är stora ``X''.
 \begin{itemize}
 \item fyll på med lärsekvenser
 \item jämför studentportalen förkunskapskrav och lärmål på alla ingående kurser
-\item homogenisera språket i programmåldelen
 \end{itemize}
 \input{Vision_Jansson_2010}
 \end{document}
