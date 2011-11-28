@@ -6,13 +6,9 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
-\newcommand{\TODO}[1]{\marginpar{\footnotesize \raggedright #1}}
-\setlength{\parindent}{0mm}
-\setlength{\parskip}{1ex plus 0.7ex minus 0.7 ex}
+\input{macros.tex}
 \pagestyle{plain}
 %\pagestyle{headings}
-\newcommand{\meta}[1]{{\small \emph{#1}}}
-\newcommand{\comment}[1]{}
 \hypersetup{pdftex, 
   colorlinks=true, 
   linkcolor=blue, 
@@ -26,7 +22,7 @@
 }
 \title{Programbeskrivning för Datateknik, 300hp (Chalmers)}
 \author{Patrik Jansson, programansvarig}
-\date{Utkast 2011-11-01}
+\date{Utkast 2011-12-01}
 
 \begin{document}
 \maketitle
@@ -56,8 +52,8 @@ breda begreppet \foreignlanguage{british}{Computer Science and
 }
 
 \subsection{Syfte} 
-\meta{Programsyftet beskriver på ett övergripande sätt vad programmet vill
-uppnå}
+\comment{Programsyftet beskriver på ett övergripande sätt vad
+  programmet vill uppnå}
 
 Civilingenjörsprogrammet i datateknik syftar till att studenten ska
 utveckla kunskaper, färdighet och förhållningssätt som gör att de:
@@ -85,14 +81,14 @@ Utbildningen ska även ge goda möjligheter till utveckling av de
 personliga egenskaper och attityder som bidrar till god ingenjörsetik.
 
 \subsection{Examen}
-% \meta{behörighet, examensbenämning, uppläggningen av programbeskrivningen}
+\comment{behörighet, examensbenämning, uppläggningen av programbeskrivningen}
 
 Programmet leder till en civilingenjörsexamen i datateknik, samt
 normalt också en kandidat\-examen och en masterexamen.
 
 \section{Programme goals}
 %  {\small (1-2 sidor)}
-\meta{Programmålen utgör de kunskaper, färdigheter och
+\comment{Programmålen utgör de kunskaper, färdigheter och
   förhållningssätt som de studerande förväntas ha utvecklat efter
   genomgången utbildning. Programmålen kan sägas vara en
   konkretisering av syftet och beskriver en mer detaljerad och
@@ -166,7 +162,7 @@ ordinance goals (examensordningens mål för civilingenjörsexamen).
 
 \begin{tabularx}{\textwidth}{|*{4}{C|}}
   \hline
-  \introFP{} &  \DigoDat{} &  \MOP{}   &  \OOP{}      \\\hline
+  \introFP{} &  \DigoDat{} &  \OOP{}   &  \MOP{}      \\\hline
   \DiskMat{} &  \LinAlg{}  &  \MatAn{} &  \ElKrets{}  \\\hline
 \end{tabularx}
 
@@ -199,7 +195,7 @@ ordinance goals (examensordningens mål för civilingenjörsexamen).
   \label{fig:year123}
 \end{figure*}
 \subsection{Programidé}
-\meta{Programidén redogör för hur utbildningen är upplagd för att
+\comment{Programidén redogör för hur utbildningen är upplagd för att
   uppnå de formulerade målen. Den är typiskt i form av en punktlista
   med de viktigaste principerna bakom programmets utformning, eller
   valda strategier för att uppnå målen.}
@@ -239,9 +235,9 @@ av ett utvecklingsprojekt.
 
 \subsection{Programplan}
 
-\meta{Programplanen beskriver exakt vilka kurser som ska läsas som
-  obligatoriska eller är valbara för varje årskurs av utbildningen
-  som startat ett visst läsår.}
+\comment{Programplanen beskriver exakt vilka kurser som ska läsas som
+  obligatoriska eller är valbara för varje årskurs av utbildningen som
+  startat ett visst läsår.}
 
 Programmet är indelat i kurser omfattande 7.5hp av vilka man läser
 två per läsperiod.
@@ -332,7 +328,7 @@ på något av de två program märkta med (Garanti).
   \label{fig:programdesignmatris}
 \end{figure*}
 
-\meta{Programdesignmatrisen kopplar samman programmets mål med de
+\comment{Programdesignmatrisen kopplar samman programmets mål med de
   ingående kurserna så att det framgår i vilken/vilka kurs(er) som
   vissa kunskaper eller färdigheter tänks utvecklas och examineras. I
   programdesignmatrisen synliggörs också planerade lärsekvenser för
