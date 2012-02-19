@@ -36,4 +36,4 @@ Slutligen finns också övergripande utmaningar för mänskligheten i
 stort som delproblem inom den globala omställningen till en hållbar
 utveckling.  Här finns det mycket att göra med datateknik som verktyg
 och därmed passar utbildningen i datateknik väl in i visionen
-``Chalmers - för en hållbar framtid''.
+"Chalmers - för en hållbar framtid".
